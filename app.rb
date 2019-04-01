@@ -2,6 +2,8 @@
 require 'sinatra'
 require 'shotgun'
 
-get '/cat' do
-  erb(:index)
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb :index
 end
